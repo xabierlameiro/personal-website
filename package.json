@@ -1,5 +1,5 @@
 {
-  "name": "cra-template-nextjs-flow",
+  "name": "my-persona-project",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Xabier Lameiro xabier.lameiro@gmail.com",
@@ -13,7 +13,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "cnextjsa-template-flow": "0.0.2",
     "flow-typed": "^3.3.1",
     "next": "10.2.0",
     "react": "17.0.2",
