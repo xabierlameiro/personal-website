@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react'
+import html from '../coverage/lcov-report/index.html'
 
 export default function Home(param: {
     ...
@@ -7,6 +8,7 @@ export default function Home(param: {
     return (
         <>
             <h1>Nextjs template with Flow, Jest, Prettier, Eslint and Husky</h1>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
         </>
     )
 }
