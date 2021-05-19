@@ -1,11 +1,11 @@
 import { render, screen } from '../../utils/test/test-utils'
-import Index from '../index'
+import Coverage from '../coverage'
 
 describe('Index page', () => {
     it('should render', () => {
-        render(<Index />)
+        render(<Coverage />)
         const main = screen.getByRole('heading', {
-            name: /Index/i,
+            name: /All files/i,
         })
         expect(main).toBeInTheDocument()
     })
