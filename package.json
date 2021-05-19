@@ -15,6 +15,7 @@
   "dependencies": {
     "flow-typed": "^3.3.1",
     "html-loader": "0.5.5",
+    "html-loader-jest": "^0.2.1",
     "next": "10.2.0",
     "next-images": "^1.7.0",
     "react": "17.0.2",
@@ -45,6 +46,7 @@
     "jest": "^26.6.3",
     "jsdom": "^16.5.3",
     "lint-staged": "^11.0.0",
+    "node-mocks-http": "^1.10.1",
     "prettier": "^2.3.0"
   },
   "standard": {
@@ -59,7 +61,7 @@
     }
   },
   "lint-staged": {
-    "./**/*.test.js": [
+    "./pages/**/*.test.js": [
       "jest --bail --coverage"
     ],
     "./**/*.{js, jsx}": [
@@ -82,5 +84,18 @@
       "not dead",
       "not op_mini all"
     ]
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./pages/**/*.{js,jsx}",
+      "!<rootDir>/pages/_app.js",
+      "!<rootDir>/pages/_document.js"
+    ],
+    "coverageDirectory": "<rootDir>/public/coverage/",
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.html$": "<rootDir>/utils/test/htmlLoader.js"
+    }
   }
 }
